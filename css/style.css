@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+   --fonte-padrao: "open sans", Arial, Helvetica, sans-serif;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
