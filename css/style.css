@@ -10,9 +10,118 @@
 
 :root {
    --fonte-padrao: "open sans", Arial, Helvetica, sans-serif;
+
+   --color-yellow: #FFB30F;
+   --color-red: #FD151B;
+   --color-blue: #1E3572;
 }
 
 ::before,
 ::after {
   box-sizing: border-box;
+}
+
+/* ======================= START HEADER AND STARTING SCREEN ======================= */
+.nav-option {
+  text-decoration: none;
+  color: #0d0d0d;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  font-family: var(--fonte-padrao);
+}
+
+header .nav {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  padding: 8px 7rem;
+  font-family: var(--fonte-padrao);
+  background-color: var(--color-yellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  justify-content: space-between;
+}
+
+header .options {
+  display: flex;
+}
+
+header .options .nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-header img {
+  width: 140px;
+}
+
+header .nav-bar .nav-option {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-red);
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+header .box-left {
+  width: 50%;
+  background-color: white;
+}
+
+header .box-right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 6rem;
+  width: 50%;
+  height: 100%;
+  background-color: #E7CA8E;
+  align-items: center;
+  text-align: center;
+}
+
+header .box-right .home-inscricoes-text {
+  color: var(--color-blue);
+}
+
+header .box-right .contador {
+  background-color: var(--color-yellow);
+  color: var(--color-red);
+  display: flex;
+  justify-content: center;
+  padding: 0.8rem 2.4rem 0.6rem 2.4rem;
+  border-radius: 10px;
+  
+}
+
+header .box-right .contador h1 {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+header .box-right .contador .contador-values {
+  display: flex;
+  height: min-content;
+}
+
+header .box-right .home-righ-center {
+  margin: auto;
+}
+
+header .box-right .home-logo-best {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 1.5rem;
+}
+
+header .box-right img {
+  width: 140px;
 }
