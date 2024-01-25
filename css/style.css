@@ -58,8 +58,12 @@ header .options .nav-bar {
   align-items: center;
 }
 
+header .logo-header {
+  padding-top: 0.9rem;
+}
+
 header .logo-header img {
-  width: 140px;
+  width: 160px;
 }
 
 header .nav-bar .nav-option {
@@ -72,7 +76,6 @@ header .nav-bar .nav-option {
 
 header .box-left {
   width: 50%;
-  background-color: white;
 }
 
 header .box-right {
@@ -82,7 +85,7 @@ header .box-right {
   padding-top: 6rem;
   width: 50%;
   height: 100%;
-  background-color: #E7CA8E;
+  background-color: #e7c98e;
   align-items: center;
   text-align: center;
 }
@@ -124,4 +127,173 @@ header .box-right .home-logo-best {
 
 header .box-right img {
   width: 140px;
+}
+
+/* ======================= START CATEGORIAS ======================= */
+.categorias-horario {
+  background-image: url("../img/fotos/Group\ 35.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+}
+
+.categorias {
+  height: 50rem;
+  display: flex;
+}
+
+.categorias .categorias-container {
+  width: 50rem;
+  height: 40rem;
+  margin: auto;
+}
+
+.categorias .categorias-container .categorias-title {
+  text-align: center;
+  color: var(--color-blue);
+  padding-bottom: 2rem;
+}
+
+.categorias .categorias-container .categorias-title h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-family: var(--fonte-padrao);
+}
+
+.categorias .categorias-container .categorias-title .line-title {
+  height: 0.4rem;
+  width: 6rem;
+  margin: auto;
+  display: none;
+}
+
+.categorias .categorias-container .cat-bloco {
+  display: flex;
+}
+
+.categorias .categorias-container .cat-bloco .cat-background {
+  margin-top: 2rem;
+  height: 6rem;
+  width: 50rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.categorias .categorias-container .cat-bloco .cat-card {
+  z-index: 1;
+  background-color: white;
+  margin: 0 1rem;
+  width: 23rem;
+  text-align: center;
+  padding: 2.5rem 2.2rem 3rem 2.2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.categorias .categorias-container .cat-bloco .cat-card h2 {
+  color: var(--color-blue);
+  font-family: var(--fonte-padrao);
+}
+
+.categorias .categorias-container .cat-bloco .cat-card p {
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+}
+
+.categorias .categorias-container .cat-bloco .cat-card .image-card-default {
+  height: 150px;
+  width: 290px;
+  background-color: gray;
+}
+
+/* ======================= START HORARIOS ======================= */
+.schedule {
+  height: 55rem;
+  text-align: center;
+}
+
+.schedule h1 {
+  color: var(--color-blue);
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-family: var(--fonte-padrao);
+}
+
+.schedule .image-schedule-default {
+  height: 700px;
+  width: 600px;
+  background-color: gray;
+  margin: auto;
+}
+
+
+/* ======================= START ORGANIZATION ======================= */
+.best {
+  height: 24rem;
+}
+
+.best .best-title {
+  text-align: center;
+  margin: 4rem 0 3rem 0;
+}
+
+.best .best-title h1 {
+  color: var(--color-blue);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-family: var(--fonte-padrao);
+}
+
+.best .best-container {
+  display: flex;
+  width: 70rem;
+  margin: auto;
+}
+
+.best .best-container .best-imagebox {
+  width: 35rem;
+  position: relative;
+}
+
+.best .best-container .best-imagebox .best-imagebox-center {
+  justify-content: end;
+  width: 380px;
+  height: 200px;
+  background-color: gray;
+  position: absolute;
+  right: 0;
+  margin-right: 5rem;
+  border: solid 5px var(--color-yellow);
+  border-radius: 10px;
+}
+
+.best .best-container .best-imagebox .best-imagebox-center a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.best .best-container .best-imagebox .best-imagebox-center .box {
+  background-color: #FFB30F;
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  bottom: 0;
+  width: 7.5rem;
+  border-radius: 10px 10px 0 0;
+  padding-top: 0.1rem;
+  left: 34%;
+}
+
+.best .best-container .best-imagebox .best-imagebox-center .box p {
+  margin: 0;
+}
+
+.best .best-container .best-text1 {
+  width: 35rem;
 }
