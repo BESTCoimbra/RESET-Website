@@ -297,3 +297,46 @@ header .box-right img {
 .best .best-container .best-text1 {
   width: 35rem;
 }
+
+/* ======================= START ORGANIZATION ======================= */
+.footer {
+  background-color: var(--color-yellow);
+}
+
+.footer .footer-container {
+  padding: 1.5rem 2rem 0.5rem 2rem;
+}
+
+.footer .footer-container .footer-up {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.footer .footer-container .footer-up .footer-up-left img {
+  width: 130px;
+}
+
+.footer .footer-container .footer-up .footer-up-right {
+  padding: 1rem;
+}
+
+.footer .footer-container .footer-up .footer-up-right img {
+  margin: 0.4rem;
+  width: 20px;
+}
+
+.footer .footer-container .footer-down {
+  color: var(--color-red);
+}
+
+.footer .footer-container .footer-down .footer-line {
+  background-color: var(--color-red);
+  width: 100%;
+  height: 0.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer .footer-container .footer-down p {
+  font-size: 0.8rem;
+}
