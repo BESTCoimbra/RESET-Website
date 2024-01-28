@@ -135,6 +135,45 @@ header .box-right img {
 }
 
 /* ======================= START CATEGORIAS ======================= */
+.about-event {
+  padding: 6rem 0;
+}
+
+.about-event .about-event-container {
+  width: 65rem;
+  margin: auto;
+}
+
+.about-event .about-title {
+  color: var(--color-blue);
+  padding-bottom: 2rem;
+}
+
+.about-event p {
+  font-size: 14px;
+}
+
+.about-event .about-title span {
+  color: var(--color-red);
+  font-weight: 700;
+}
+
+.about-event .about-container {
+  display: flex;
+}
+
+.about-event .about-text {
+  width: 40rem;
+  padding-right: 2rem;
+}
+
+.about-event .about-image img {
+  width: 500px;
+  border: solid 5px var(--color-yellow);
+  border-radius: 10px;
+}
+
+/* ======================= START CATEGORIAS ======================= */
 .categorias-horario {
   background-image: url("../img/fotos/Group\ 35.jpg");
   background-position: center;
@@ -213,6 +252,10 @@ header .box-right img {
   height: 150px;
   width: 290px;
   background-color: gray;
+}
+
+.categorias .categorias-container .cat-bloco .cat-card img {
+  width: 290px;
 }
 
 /* ======================= START HORARIOS ======================= */
