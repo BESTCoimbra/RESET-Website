@@ -99,6 +99,10 @@ header .box-right .home-inscricoes-text {
   color: var(--color-blue);
 }
 
+header .box-right .home-inscricoes-text h2 {
+  font-weight: 700;
+}
+
 header .box-right .contador {
   background-color: var(--color-yellow);
   color: var(--color-red);
@@ -154,8 +158,14 @@ header .box-right img {
 }
 
 .about-event .about-title span {
-  color: var(--color-red);
-  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.about-event .about-title span img {
+  width: 140px;
+  transform: translateY(-6px);
 }
 
 .about-event .about-container {
@@ -399,6 +409,7 @@ header .box-right img {
 .parceiros {
   padding: 4rem 0 5rem;
   font-family: var(--fonte-padrao);
+  background-color: var(--color-yellow);
 }
 
 .parceiros .title-parceiros {
