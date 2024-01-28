@@ -34,6 +34,11 @@ header {
   color: #fff;
   display: flex;
   font-family: var(--fonte-padrao);
+  background-image: url("../img/fotos/home-page.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 header .nav {
@@ -85,7 +90,7 @@ header .box-right {
   padding-top: 6rem;
   width: 50%;
   height: 100%;
-  background-color: #e7c98e;
+  background-color: #e7c98ea9;
   align-items: center;
   text-align: center;
 }
@@ -234,7 +239,7 @@ header .box-right img {
 
 /* ======================= START ORGANIZATION ======================= */
 .best {
-  height: 28rem;
+  height: 30rem;
 }
 
 .best .best-title {
@@ -263,12 +268,14 @@ header .box-right img {
 
 .best .best-container .best-imagebox .best-imagebox-center {
   justify-content: end;
-  width: 380px;
-  height: 200px;
-  background-color: gray;
+  width: 470px;
+  height: 280px;
+  background-image: url("../img/fotos/Sobre\ BEST\ Coimbra2.jpg");
+  background-position: center;
+  background-size: cover;
   position: absolute;
   right: 0;
-  margin-right: 5rem;
+  margin-right: 3rem;
   border: solid 5px var(--color-yellow);
   border-radius: 10px;
 }
@@ -296,6 +303,17 @@ header .box-right img {
 
 .best .best-container .best-text1 {
   width: 35rem;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.best .best-container .best-text1 h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E3572;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 /* ======================= START DIVIDER ======================= */
@@ -598,7 +616,7 @@ header .box-right img {
 }
 
 .footer .footer-container .footer-up .footer-up-left img {
-  width: 130px;
+  width: 100px;
 }
 
 .footer .footer-container .footer-up .footer-up-right {
