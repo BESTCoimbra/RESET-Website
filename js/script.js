@@ -17,7 +17,7 @@ function openResponse(id) {
   var question = document.querySelector(".question-" + id);
   var seta = document.querySelector(".seta-" + id);
 
-  for (let i = 1; i <= 7; ++i) {
+  for (let i = 1; i <= 9; ++i) {
     //fecha as respostas que estão abertas
     if (id != i) {
       desativateOpenResponses(i);
@@ -36,7 +36,7 @@ function openResponse(id) {
   } else {
     // esta fechado
     response.style.maxHeight = "300px";
-    response.style.padding = "20px 35px";
+    response.style.padding = "15px 35px";
     question.style.backgroundColor = "red";
     question.style.color = "white";
     seta.style.boxShadow = "2px -2px 0 0.5px white inset";
@@ -75,6 +75,7 @@ $(function() {
   $(window).on('scroll', function() {
     $("#about-event-prank-button").css({
       'position': originalPosition,
+      'z-index': '1',
       'top': originalTop,
       'left': originalLeft
     });
@@ -123,4 +124,34 @@ document.addEventListener('DOMContentLoaded', function() {
       scale: 1
     });
   });
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  const navbar = document.querySelector('header .nav');
+  navbar.classList.add('nav-default');
+  const yellowSections = document.querySelectorAll('.parceiros, .categorias-horario');
+
+  const onScroll = () => {
+    let isNavbarOnYellow = false;
+
+    yellowSections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const scrollPosition = window.scrollY + navbar.offsetHeight*2;
+
+      if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+        isNavbarOnYellow = true;
+      }
+    });
+
+    if (isNavbarOnYellow) {
+      navbar.classList.add('nav-on-yellow');
+      navbar.classList.remove('nav-default');
+    } else {
+      navbar.classList.add('nav-default');
+      navbar.classList.remove('nav-on-yellow');
+    }
+  };
+
+  window.addEventListener('scroll', onScroll);
 });
