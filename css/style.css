@@ -407,14 +407,27 @@ header .box-right img {
 
 /* ======================= START PARCEIROS ======================= */
 .parceiros {
-  padding: 4rem 0 5rem;
+  padding: 4rem 0 6rem;
   font-family: var(--fonte-padrao);
   background-color: var(--color-yellow);
 }
 
 .parceiros .title-parceiros {
   text-align: center;
-  margin: 1rem 0 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.parceiros .parceiros-title-line {
+  height: 5px;
+  width: 200px;
+  background-color: red;
+  margin: 0 auto 2rem;
+  
+}
+
+.parceiros .title-parceiros-empresas {
+  margin-top: 6rem;
 }
 
 .parceiros .title-parceiros h1 {
@@ -430,7 +443,7 @@ header .box-right img {
   margin: auto;
 }
 
-.parceiros .parceiros-box .ul-pareceiros {
+.parceiros .parceiros-box .ul-parceiros {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -446,13 +459,17 @@ header .box-right img {
   margin: 1rem;
 }
 
-.parceiros .parceiros-box img {
-  width: 10rem;
+.parceiros .sec-instituicoes img {
+  width: 18rem;
+}
+
+.parceiros .sec-empresas img {
+  width: 24rem;
 }
 
 /* ======================= START FAQ ======================= */
 .faq {
-  height: 50rem;
+  height: 45rem;
   padding: 4rem 0 5rem;
   font-family: var(--fonte-padrao);
 }
