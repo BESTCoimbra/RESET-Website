@@ -1,27 +1,29 @@
-var deadline = new Date("Mar 24, 2024 23:59:59").getTime();
+var deadline = new Date("Feb 20, 2024 23:59:59").getTime();
 var x = setInterval(function() {
-var now = new Date().getTime();
-var t = deadline - now;
-var days = Math.floor(t / (1000 * 60 * 60 * 24));
-var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
-var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    var now = new Date().getTime();
+    var t = deadline - now;
 
-if(days<0){
-    document.querySelector(".demo-days-p").innerHTML = 0;
-    document.querySelector(".demo-hours-p").innerHTML = 0;
-    document.querySelector(".demo-minutes-p").innerHTML = 0;
-    document.querySelector(".demo-seconds-p").innerHTML = 0;
-}
-else {
-    document.querySelector(".demo-days-p").innerHTML = days;
-    document.querySelector(".demo-hours-p").innerHTML = hours;
-    document.querySelector(".demo-minutes-p").innerHTML = minutes;
-    document.querySelector(".demo-seconds-p").innerHTML = seconds;
-}
+    var totalHours = Math.floor(t / (1000 * 60 * 60));
 
-if (t < 0) {
-    clearInterval(x);
-    document.querySelector(".demo").innerHTML = "EXPIRED";
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+    var minutesFormatted = String(minutes).padStart(2, '0');
+    var secondsFormatted = String(seconds).padStart(2, '0');
+
+    if(totalHours < 0){
+        document.querySelector(".demo-hours-p").innerHTML = "00";
+        document.querySelector(".demo-minutes-p").innerHTML = "00";
+        document.querySelector(".demo-seconds-p").innerHTML = "00";
+    }
+    else {
+        document.querySelector(".demo-hours-p").innerHTML = totalHours;
+        document.querySelector(".demo-minutes-p").innerHTML = minutesFormatted;
+        document.querySelector(".demo-seconds-p").innerHTML = secondsFormatted;
+    }
+
+    if (t < 0) {
+        clearInterval(x);
+        document.querySelector(".contador").innerHTML = "EXPIRED";
     }
 }, 1000);

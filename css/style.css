@@ -34,6 +34,11 @@ header {
   color: #fff;
   display: flex;
   font-family: var(--fonte-padrao);
+  background-image: url("../img/fotos/home-page.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 header .nav {
@@ -43,10 +48,18 @@ header .nav {
   height: 6rem;
   padding: 8px 7rem;
   font-family: var(--fonte-padrao);
-  background-color: var(--color-yellow);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
   z-index: 99999;
   justify-content: space-between;
+  transition: background-color 0.5s;
+}
+
+.nav-default {
+  background-color: var(--color-yellow);
+}
+
+.nav-on-yellow {
+  background-color: rgb(250, 250, 250);
 }
 
 header .options {
@@ -85,13 +98,17 @@ header .box-right {
   padding-top: 6rem;
   width: 50%;
   height: 100%;
-  background-color: #e7c98e;
+  background-color: #e7c98ea9;
   align-items: center;
   text-align: center;
 }
 
 header .box-right .home-inscricoes-text {
   color: var(--color-blue);
+}
+
+header .box-right .home-inscricoes-text h2 {
+  font-weight: 700;
 }
 
 header .box-right .contador {
@@ -127,6 +144,92 @@ header .box-right .home-logo-best {
 
 header .box-right img {
   width: 140px;
+}
+
+/* ======================= START ABOUT EVENT ======================= */
+.about-event {
+  padding: 6rem 0;
+}
+
+.about-event .about-event-container {
+  width: 65rem;
+  margin: auto;
+}
+
+.about-event .about-title {
+  color: var(--color-blue);
+  padding-bottom: 2rem;
+}
+
+.about-event p {
+  font-size: 14px;
+}
+
+.about-event .about-title span {
+  padding: 0;
+  margin: 0;
+  
+}
+
+.about-event .about-title span img {
+  width: 140px;
+  transform: translateY(-6px);
+}
+
+.about-event .about-container {
+  display: flex;
+}
+
+.about-event .about-text {
+  width: 40rem;
+  padding-right: 2rem;
+}
+
+.about-event .about-image img {
+  width: 500px;
+  border: solid 5px var(--color-yellow);
+  border-radius: 10px;
+}
+
+.about-event .about-event-button-wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+
+.about-event .about-event-button-positioner {
+  display: flex;
+}
+
+.about-event .about-event-button-positioner div {
+  display: block;
+  max-height: 1000px;
+}
+
+.about-event .about-event-link {
+  cursor: pointer;
+  margin: 10px 30px 10px 10px;
+  width: max-content;
+  text-align: center;
+  background-color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  border-radius: 5px;
+  color: #fff;
+  box-shadow: 0 1.5px rgba(0,0,0,0.15);
+  transition: 0.22s;
+}
+
+.about-event .about-event-link:hover {
+  background-color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.about-event .about-event-link a {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* ======================= START CATEGORIAS ======================= */
@@ -210,6 +313,10 @@ header .box-right img {
   background-color: gray;
 }
 
+.categorias .categorias-container .cat-bloco .cat-card img {
+  width: 290px;
+}
+
 /* ======================= START HORARIOS ======================= */
 .schedule {
   height: 55rem;
@@ -234,7 +341,7 @@ header .box-right img {
 
 /* ======================= START ORGANIZATION ======================= */
 .best {
-  height: 28rem;
+  height: 30rem;
 }
 
 .best .best-title {
@@ -263,12 +370,14 @@ header .box-right img {
 
 .best .best-container .best-imagebox .best-imagebox-center {
   justify-content: end;
-  width: 380px;
-  height: 200px;
-  background-color: gray;
+  width: 470px;
+  height: 280px;
+  background-image: url("../img/fotos/Sobre\ BEST\ Coimbra2.jpg");
+  background-position: center;
+  background-size: cover;
   position: absolute;
   right: 0;
-  margin-right: 5rem;
+  margin-right: 3rem;
   border: solid 5px var(--color-yellow);
   border-radius: 10px;
 }
@@ -296,53 +405,153 @@ header .box-right img {
 
 .best .best-container .best-text1 {
   width: 35rem;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.best .best-container .best-text1 h5 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1E3572;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 /* ======================= START DIVIDER ======================= */
 .divider-sections {
   width: 100%;
-  height: 1.5rem;
+  height: 6rem;
   align-items: center;
-  background-color: var(--color-red);
   margin: 2rem 0;
 }
 
-.divider-3-circles {
-  background-color: white;
-  width: 9.5rem;
-  display: flex;
+.divider-background {
+  background-image: linear-gradient(to right, transparent, var(--color-red), transparent);
+  width: 100%;
+  height: 1rem;
   position: absolute;
-  text-align: center;
-  color: var(--color-yellow);
-  cursor: default;
-  left: 45%;
-  padding: 0 1rem;
+  margin-top: 2.75rem;
 }
 
-.divider-sections .divider-circle {
-  background-color: var(--color-yellow);
-  border-radius: 1.5rem;
-  width: 1.5rem;
-  margin: 0 0.5rem;
+#divider-container {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  margin: auto;
+  transform: scale(0.8);
 }
 
-.bar-more-space-right {
-  margin-right: 2rem;
+.divider-box-back { 
 }
 
-.bar-more-space-left {
-  margin-left: 2rem;
+.divider-sections button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  
 }
+
+.divider-sections button.divider-face-button {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  background: #fdda5f;
+  box-shadow: inset 2px -4px 18px #fd9744;
+}
+
+.divider-face-container {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  margin: auto;
+}
+
+.divider-eye {
+  position: absolute;
+  height: 0.5rem;
+  width: 0.5rem;
+  background: #2a2927;
+  border-radius: 50%;
+  animation: eyeBlink 3200ms linear infinite;
+}
+
+.divider-eye.divider-left {
+  left: 0;
+}
+
+.divider-eye.divider-right {
+  left: 2rem;
+}
+
+.divider-mouth {
+  position: absolute;
+  top: 1.125rem;
+  left: 0.8rem;
+  width: 1rem;
+  height: 0.125rem;
+  background: #2a2927;
+  border-radius: 0;
+}
+
+.divider-eye, .divider-mouth {
+  box-shadow: inset 1px 2px 4px #121110;
+}
+
+.divider-face-button:hover .divider-mouth, .divider-face-button:active .divider-mouth {
+  left: 1rem;
+  width: 0.5rem;
+  height: 0.4rem;
+  border-radius: 1rem 1rem 0.125rem 0.125rem;
+}
+
+.divider-face-button:hover .divider-eye, .divider-face-button:active .divider-eye {
+  height: 0.375rem;
+  width: 0.375rem;
+  box-shadow: 0 0 0 0.25rem #fff;
+}
+
+@keyframes eyeBlink {
+  0%, 30%, 36%, 100% {
+    transform: scale(1);
+  }
+  32%, 34% {
+    transform: scale(1, 0);
+  }
+}
+
+
 
 /* ======================= START PARCEIROS ======================= */
 .parceiros {
-  padding: 4rem 0 5rem;
+  padding: 4rem 0 6rem;
   font-family: var(--fonte-padrao);
+  background-color: var(--color-yellow);
 }
 
 .parceiros .title-parceiros {
   text-align: center;
-  margin: 1rem 0 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.parceiros .parceiros-title-line {
+  height: 5px;
+  width: 200px;
+  background-color: red;
+  margin: 0 auto 2rem;
+  
+}
+
+.parceiros .title-parceiros-empresas {
+  margin-top: 6rem;
 }
 
 .parceiros .title-parceiros h1 {
@@ -358,7 +567,7 @@ header .box-right img {
   margin: auto;
 }
 
-.parceiros .parceiros-box .ul-pareceiros {
+.parceiros .parceiros-box .ul-parceiros {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -374,13 +583,17 @@ header .box-right img {
   margin: 1rem;
 }
 
-.parceiros .parceiros-box img {
-  width: 10rem;
+.parceiros .sec-instituicoes img {
+  width: 18rem;
+}
+
+.parceiros .sec-empresas img {
+  width: 24rem;
 }
 
 /* ======================= START FAQ ======================= */
 .faq {
-  height: 50rem;
+  height: 45rem;
   padding: 4rem 0 5rem;
   font-family: var(--fonte-padrao);
 }
@@ -426,8 +639,8 @@ header .box-right img {
   border-radius: 3px;
   list-style-type: none;
   background-color: var(--color-yellow);
-  transform: translateY(0.45em);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(0.1rem);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .faq .faq-container ul li .question {
@@ -437,6 +650,7 @@ header .box-right img {
   border-radius: 5px;
   transition: 0.6s;
   cursor: default;
+  margin: -5px 0;
 }
 
 .faq .faq-container .faq-container-right ul p {
@@ -451,7 +665,9 @@ header .box-right img {
 .faq .response-4,
 .faq .response-5,
 .faq .response-6,
-.faq .response-7 {
+.faq .response-7,
+.faq .response-8,
+.faq .response-9 {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
@@ -598,7 +814,7 @@ header .box-right img {
 }
 
 .footer .footer-container .footer-up .footer-up-left img {
-  width: 130px;
+  width: 100px;
 }
 
 .footer .footer-container .footer-up .footer-up-right {

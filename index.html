@@ -24,9 +24,9 @@
     <!-- ==================== START HEADER ======================= -->
     <header>
       <a id="header"></a>
-      <nav class="nav">
+      <nav class="nav .nav-default .navbar-alternate">
         <a class="logo-header" href="#header">
-            <img src="img/logos/logoArtboard_184x.png" alt="BEST-Coimbra" id="header_logo">
+            <img src="img/logos/image 18.png" alt="BEST-Coimbra" id="header_logo">
         </a>
         <div class="options">
           <div class="nav-bar">
@@ -46,7 +46,7 @@
       <div class="box-right">
         <div class="home-righ-center">
             <div class="home-inscricoes-text">
-                <h2>Inscrições abrem em:</h2>
+                <h2>Inscrições fecham em:</h2>
             </div>
             <div class="contador">
                 <div class="contador-values">
@@ -68,6 +68,39 @@
       </div>
     </header>
     <main>
+        <section class="about-event">
+            <div class="about-event-container">
+                <div class="about-title">
+                    <h1>O que é a <span><img src="img/logos/image 18.png" alt="BEST-Coimbra"></span>?</h1>
+                </div>
+                <div class="about-container">
+                    <div class="about-text">
+                        <p>A Reset é uma competição que promete <strong>24 horas</strong> de pura engenharia para estudantes da Faculdade de Ciências
+                            e Tecnologias da Universidade de Coimbra.</p>
+                        <p>Durante os dias <strong>2 e 3 de Março</strong>, nos departamentos de Engenharia Electrotécnica e de Computadores e de Engenharia Informática, os estudantes irão enfrentar problemas <strong>propostos por empresas</strong> dentro de uma das categorias, Case Study ou Hackathon. Além dos tópicos principais, existem desafios ao longo da competição que visam testar a agilidade e versatilidade dos participantes. Tudo isto com prémios incríveis!</p>    
+                        <p>Junta 3 amigos e vem desafiar-te!</p>
+                        <p>Vais querer ficar de fora?</p>
+                        <div class="about-event-button-wrapper">
+                            <div class="about-event-button-positioner">
+                                <div class="about-event-link">
+                                    <a href="#">
+                                        Vou já inscrever-me!
+                                    </a>
+                                </div>
+                                <div id="about-event-prank-button" class="about-event-link">
+                                    <a href="#">
+                                        Sim 😏
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/fotos/o que é a Reset.jpg" alt="Sobre o evento">
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="categorias-horario">
             <!-- ==================== START CATEGORIAS ======================= -->
             <a id="categorias"></a>
@@ -82,14 +115,12 @@
                         <div class="card cat-card">
                             <h2>Case Study</h2>
                             <p>Case Study consiste num desafio teórico de resolução de problemas que requer analisar, pesquisar, deliberar, testar e apresentar uma solução que se ajuste a um cenário de caso real baseado em recursos realistas dentro de um tempo limitado.</p>
-                            <div class="image-card-default"></div>
-                            <!--<img src="" alt="Case Study">-->
+                            <img src="img/fotos/Hackathon.JPG" alt="Case Study">
                         </div>
                         <div class="card cat-card">
                             <h2>Hackaton</h2>
                             <p>Hackaton consiste num desafio prático de resolução de problemas com programação requer analisar, pesquisar, deliberar, testar e apresentar uma solução que se ajuste ao problema em uma linguagem determinada dentro de um tempo limitado.</p>
-                            <div class="image-card-default"></div>
-                            <!--<img src="" alt="Hackaton">-->
+                            <img src="img/fotos/Hackathon.JPG" alt="Hackaton">
                         </div>
                     </div>
                 </div>
@@ -106,40 +137,6 @@
                 </div>
             </section>
         </div>
-        <!-- ==================== START PARCEIROS ======================= -->
-        <a id="parceiros"></a>
-        <section class="parceiros">
-            <div class="title-parceiros">
-                <h1>Parcerias</h1>
-            </div>
-            <div class="parceiros-box">
-                <ul class="ul-pareceiros">
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                </ul>
-                <ul class="ul-pareceiros">
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                    <li>
-                        <img src="img\equipa\PauloMeira.jpg" alt="Parceiro">
-                    </li>
-                </ul>
-            </div>
-        </section>
         <!-- ==================== START FAQ ======================= -->
         <a id="faq"></a>
         <section class="faq">
@@ -207,17 +204,40 @@
                         </div>
                     </li>
                     <p class="response-7">Não, não podes abandonar o local do evento durante as 24h da competição, a não ser em situações justificáveis. Para o fazeres, terás de ter autorização do Organizador Principal do evento.</p>
+                    <li onclick="openResponse('8')">
+                        <div class="tira"></div>
+                        <div class="question question-8">
+                            <div>Posso me inscrever para Case Study e Hackathon?</div>
+                            <a id="seta" class="seta-8"></a>
+                        </div>
+                    </li>
+                    <p class="response-8">As 2 categorias vão acontecer em simultâneo, por isso só poderás inscrever-te numa delas.</p>
+                    <li onclick="openResponse('9')">
+                        <div class="tira"></div>
+                        <div class="question question-9">
+                            <div>Haverão outros desafios e atividades durante o evento?</div>
+                            <a id="seta" class="seta-9"></a>
+                        </div>
+                    </li>
+                    <p class="response-9">Estão planeados desafios dados por empresas e atividades fun para se entreterem durante a noite</p>
                 </ul>
             </div>
         </section>
-
         <div class="divider-sections">
             <div class="divider-3-circles">
-                <div class="divider-circle"></div>
-                <div class="divider-circle">o</div>
-                <div class="divider-circle"></div>
+                <div class="divider-background"></div>
+                <div id="divider-container">
+                    <button class="divider-face-button">
+                        <span class="divider-face-container">
+                            <span class="divider-eye divider-left"></span>
+                            <span class="divider-eye divider-right"></span>
+                            <span class="divider-mouth"></span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
+        
         <!-- ==================== START TEAM ======================= -->
         <a id="team"></a>
         <section class="team">
@@ -304,13 +324,52 @@
                 </div>
             </div>
         </section>
-        <div class="divider-sections">
-            <div class="divider-3-circles">
-                <div class="divider-circle"></div>
-                <div class="divider-circle">o</div>
-                <div class="divider-circle"></div>
+        <!-- ==================== START PARCEIROS ======================= -->
+        <a id="parceiros"></a>
+        <section class="parceiros">
+            <div class="title-parceiros">
+                <h1>Parcerias Instituicionais</h1>
             </div>
-        </div>
+            <div class="parceiros-title-line"></div>
+            <div class="parceiros-box sec-instituicoes">
+                <ul class="ul-parceiros">
+                    <li>
+                        <img src="img/parceiros/CMC horizontal.png" alt="CMC">
+                    </li>
+                    <li>
+                        <img src="img/parceiros/DEEC cores.png" alt="DEEC">
+                    </li>
+                    <li>
+                        <img src="img/parceiros/dei_logo_raster_cyan_3-1.png" alt="DEI">
+                    </li>
+                </ul>
+                <ul class="ul-parceiros">
+                    <li>
+                        <img src="img/parceiros/IPDJ cor horizontal.png" alt="IPDJ">
+                    </li>
+                    <li>
+                        <img src="img/parceiros/OE região centro.png" alt="OE Região Centro">
+                    </li>
+                    <li>
+                        <img src="img/parceiros/FCTUC azul horizontal.png" alt="FCTUC">
+                    </li>
+                </ul>
+            </div>
+            <div class="title-parceiros title-parceiros-empresas">
+                <h1>Empresas Parceiras</h1>
+            </div>
+            <div class="parceiros-title-line"></div>
+            <div class="parceiros-box sec-empresas">
+                <ul class="ul-parceiros">
+                    <li>
+                        <img src="img/empresas/logo_HORIZONTAL_CRITICALSoftware_Horizontal Version-2.png" alt="Critical">
+                    </li>
+                    <li>
+                        <img src="img/empresas/OutSystems-logo-digital-2018-main-color.svg" alt="OutSystems">
+                    </li>
+                </ul>
+            </div>
+        </section>
         <!-- ==================== START BEST ======================= -->
         <a id="best"></a>
         <section class="best">
@@ -326,10 +385,12 @@
                             </div>
                         </a>
                     </div>
-                    
                 </div>
                 <div class="best-text1" id="text1">
-                    <p>O BEST (Board of European Students of Technology) é uma organização sem fins lucrativos, apolítica e não governamental, cujo principal objetivo é desenvolver estudantes de ciências e tecnologia pela Europa. O BEST Coimbra é o grupo local do BEST da Universidade de Coimbra, ativo desde 1992 na Faculdade de Ciências e Tecnologia da Universidade de Coimbra (FCTUC). Ao longo do ano letivo, realiza diversos eventos, tais como competições de engenharia, feiras de emprego e workshops para os estudantes da FCTUC, bem como BEST Courses frequentados por estudantes de toda a Europa.</p>
+                    <p>O BEST (Board of European Students of Technology) é uma organização sem fins lucrativos que tem o objetivo de proporcionar oportunidades de comunicação e intercâmbio entre estudantes , empresas e universidades de toda a Europa.</p>
+                    <p>O BEST Coimbra é o grupo local da Universidade de Coimbra com</p>
+                    <h5>+60 Membros</h5>
+                    <p>Tem como objetivo complementar a educação, dar apoio à carreira e aumentar o envolvimento educacional dos estudantes da faculdade, por isso organiza eventos como <strong>competições de engenharia</strong>, <strong>feiras de emprego</strong> e <strong>cursos de verão</strong> para os estudantes da FCTUC e de toda a Europa.</p>
                 </div>
             </div>    
         </section>
@@ -340,7 +401,7 @@
             <div class="footer-container">
                 <div class="footer-up">
                     <div class="footer-up-left">
-                        <img src="img/logos/cores.png" alt="BEST">
+                        <img src="img/logos/logo-best-vermelho.svg" alt="BEST">
                     </div>
                     <div class="footer-up-right">
                         <a href="https://www.instagram.com/bestcoimbra/" target="_blank"><img src="img/icons/instagram.png" alt="Instagram"></a>
@@ -358,11 +419,15 @@
     </footer>
   </body>
 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
   <!-- Loading Screen Code -->
   <script src="js/script.js"></script>
+  <script src="js/contador.js"></script>
 
   <!-- Bootstrap Code -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </html>
