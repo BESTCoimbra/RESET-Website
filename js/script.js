@@ -17,7 +17,7 @@ function openResponse(id) {
   var question = document.querySelector(".question-" + id);
   var seta = document.querySelector(".seta-" + id);
 
-  for (let i = 1; i <= 9; ++i) {
+  for (let i = 1; i <= 8; ++i) {
     //fecha as respostas que estão abertas
     if (id != i) {
       desativateOpenResponses(i);
@@ -53,6 +53,31 @@ function openDropdownResponse() {
     response.style.display = "flex";
   }
 }
+
+const navbarPhone = document.querySelector(".options-phone");
+const optionsPhone = document.querySelectorAll('.nav-option2');
+
+var btn = document.querySelector(".btn");
+btn.addEventListener('click', function() {
+  if (this.classList.contains('active')) {
+    this.classList.remove('active');
+    this.classList.add('not-active');
+    navbarPhone.style.display = "none";
+  } else {
+    this.classList.remove('not-active');
+    this.classList.add('active');
+    navbarPhone.style.display = "flex";
+  }
+});
+
+optionsPhone.forEach(option => {
+  option.addEventListener('click', function() {
+    console.log('atão');
+    btn.classList.remove('active');
+    btn.classList.add('not-active');
+    navbarPhone.style.display = "none";
+  });
+});
 
 $(function() {
   var originalTop = $("#about-event-prank-button").css('top');
