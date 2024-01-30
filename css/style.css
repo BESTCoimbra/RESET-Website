@@ -545,7 +545,7 @@ span + span {
 
 /* ======================= START CATEGORIAS ======================= */
 .categorias-horario {
-  background-image: url("../img/fotos/Group\ 35.jpg");
+  background-image: url("../img/fotos/Group\ 34.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -555,7 +555,7 @@ span + span {
 }
 
 .categorias {
-  height: 50rem;
+  height: 58rem;
   display: flex;
 }
 
@@ -603,7 +603,7 @@ span + span {
   margin: 0 1rem;
   width: 23rem;
   text-align: center;
-  padding: 2.5rem 2.2rem 3rem 2.2rem;
+  padding: 2.5rem 2.2rem;
   border-radius: 0.5rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 }
@@ -624,10 +624,71 @@ span + span {
   background-color: gray;
 }
 
+.categorias .categorias-container .cat-bloco .cat-card h4 {
+  color: var(--color-blue);
+  margin-top: 1rem;
+  font-weight: 500;
+  font-family: var(--fonte-padrao);
+}
+
 .categorias .categorias-container .cat-bloco .cat-card img {
   width: 290px;
-  height: 170px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 860px) {
+  .categorias,
+  .categorias .categorias-container {
+    height: auto;
+  }
+  .categorias .categorias-container .categorias-title h1{
+    font-size: 2.7rem;
+    margin-top: 5rem;
+  }
+
+  .categorias .categorias-container .cat-bloco {
+    display: block;
+  }
+
+  .categorias .categorias-container .cat-bloco .cat-card {
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .categorias .categorias-container .categorias-title h1{
+    font-size: 2.2rem;
+  }
+
+  .categorias .categorias-container .cat-bloco .cat-card {
+    width: 20rem;
+    padding: 2.5rem 2.2rem;
+  }
+
+  .categorias .categorias-container .cat-bloco .cat-card img {
+    width: 250px;
+  }
+  .categorias .categorias-container .cat-bloco .cat-card p {
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .categorias .categorias-container .cat-bloco .cat-card {
+    width: 18rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .categorias .categorias-container .cat-bloco .cat-card img {
+    width: 240px;
+  }
+
+  .categorias .categorias-container .cat-bloco .cat-card p {
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+  }
 }
 
 /* ======================= START HORARIOS ======================= */
@@ -651,6 +712,53 @@ span + span {
   margin: auto;
 }
 
+@media only screen and (max-width: 860px) {
+  .schedule {
+    height: auto;
+    padding: 5rem 0;
+  }
+  .schedule h1 {
+    font-size: 2.7rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .schedule .image-schedule-default {
+    height: 600px;
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .schedule .image-schedule-default {
+    height: 500px;
+    width: 420px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .schedule .image-schedule-default {
+    height: 400px;
+    width: 340px;
+  }
+  .schedule h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .schedule .image-schedule-default {
+    height: 300px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .schedule .image-schedule-default {
+    height: 250px;
+    width: 210px;
+  }
+}
 
 /* ======================= START ORGANIZATION ======================= */
 .best {
