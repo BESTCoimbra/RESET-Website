@@ -309,6 +309,7 @@ span + span {
   cursor: pointer;
 }
 
+/* responsividade navbar */
 @media only screen and (max-width: 1120px) {
   header .nav {
     padding: 8px 3rem;
@@ -343,6 +344,18 @@ span + span {
     margin: 1.5rem 1rem;
   }
 }
+
+/* responsividade home-page */
+@media only screen and (max-width: 1120px) {
+  
+}
+@media only screen and (max-width: 970px) {
+
+}
+@media only screen and (max-width: 680px) {
+
+}
+
 
 
 /* ======================= START ABOUT EVENT ======================= */
@@ -642,9 +655,6 @@ span + span {
   height: 6.25rem;
   margin: auto;
   transform: scale(0.8);
-}
-
-.divider-box-back { 
 }
 
 .divider-sections button {

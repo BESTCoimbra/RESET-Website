@@ -17,7 +17,7 @@ function openResponse(id) {
   var question = document.querySelector(".question-" + id);
   var seta = document.querySelector(".seta-" + id);
 
-  for (let i = 1; i <= 9; ++i) {
+  for (let i = 1; i <= 8; ++i) {
     //fecha as respostas que estão abertas
     if (id != i) {
       desativateOpenResponses(i);
