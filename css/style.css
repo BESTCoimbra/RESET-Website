@@ -444,6 +444,20 @@ span + span {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1120px) {
+  .about-event .about-event-container {
+    width: auto;
+    padding: 0 2rem;
+  }
+  .about-event .about-image img {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 876px) {
+  
+}
+
 /* ======================= START CATEGORIAS ======================= */
 .categorias-horario {
   background-image: url("../img/fotos/Group\ 35.jpg");
@@ -527,6 +541,8 @@ span + span {
 
 .categorias .categorias-container .cat-bloco .cat-card img {
   width: 290px;
+  height: 170px;
+  border-radius: 5px;
 }
 
 /* ======================= START HORARIOS ======================= */
@@ -553,12 +569,12 @@ span + span {
 
 /* ======================= START ORGANIZATION ======================= */
 .best {
-  height: 30rem;
+  padding: 9rem 0;
 }
 
 .best .best-title {
   text-align: center;
-  margin: 7rem 0 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .best .best-title h1 {
@@ -800,9 +816,13 @@ span + span {
   width: 24rem;
 }
 
+.parceiros .sec-empresas .ul-parceiros2 img {
+  width: 16rem;
+}
+
 /* ======================= START FAQ ======================= */
 .faq {
-  height: 45rem;
+  height: 43rem;
   padding: 4rem 0 5rem;
   font-family: var(--fonte-padrao);
 }
@@ -930,7 +950,7 @@ span + span {
 }
 
 .team .team-container .team-box {
-  width: 42rem;
+  width: 70rem;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -948,6 +968,13 @@ span + span {
   display: inline-block;
   margin: 10px;
   cursor: default;
+}
+
+.team .team-container li img {
+    width: 100%;
+    height: auto;
+    max-width: 12.5rem;
+    max-height: 16.6rem;
 }
 
 .team .team-container li .team-desc::after {
@@ -990,6 +1017,7 @@ span + span {
 
 .team .team-container li a img {
   width: 1rem;
+  height: auto;
 }
 
 .team .team-container li:nth-child(3n) img {
