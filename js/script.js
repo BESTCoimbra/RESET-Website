@@ -36,7 +36,7 @@ function openResponse(id) {
   } else {
     // esta fechado
     response.style.maxHeight = "300px";
-    response.style.padding = "15px 35px";
+    response.style.padding = "15px 35px 0";
     question.style.backgroundColor = "red";
     question.style.color = "white";
     seta.style.boxShadow = "2px -2px 0 0.5px white inset";
