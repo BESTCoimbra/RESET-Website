@@ -1296,6 +1296,73 @@ span + span {
   margin: 0;
 }
 
+@media only screen and (max-width: 1150px) {
+  .team {
+    padding: 3rem 0 5rem;
+  }
+  .team .team-container .team-box {
+    width: 42rem;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .team .team-container .title-team h1 {
+    font-size: 2.7rem;
+  }
+  .team .team-container .team-box {
+    width: 34.3rem;
+  }
+  .team .team-container li img {
+    max-width: 10rem;
+    max-height: 13.28rem;
+}
+  .team .team-container li a img {
+    width: 0.8rem;
+  }
+  .team .team-container .team-desc h4 {
+    font-size: 18px;
+  }
+  .team .team-container .team-desc p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .team .team-container .title-team h1 {
+    font-size: 2.5rem;
+  }
+  .team .team-container .team-box {
+    width: 29.5rem;
+  }
+  .team .team-container li img {
+    max-width: 9rem;
+    max-height: 11.95rem;
+}
+  .team .team-container li a img {
+    width: 0.7rem;
+  }
+  .team .team-container .team-desc h4 {
+    font-size: 18px;
+  }
+  .team .team-container .team-desc p {
+    font-size: 11px;
+  }
+  .team .team-container li {
+    margin: 3px 5px;
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .team .team-container .title-team h1 {
+    font-size: 2rem;
+    margin: 0 2rem;
+  }
+  .team .team-container .team-box {
+    width: 19.5rem;
+  }
+}
+
+
 /* ======================= START FOOTER ======================= */
 .footer {
   background-color: var(--color-yellow);
