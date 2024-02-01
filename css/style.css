@@ -780,13 +780,14 @@ span + span {
 
 .best .best-container {
   display: flex;
-  width: 70rem;
+  width: 67rem;
   margin: auto;
 }
 
 .best .best-container .best-imagebox {
-  width: 35rem;
+  width: 30rem;
   position: relative;
+  margin-right: 2rem;
 }
 
 .best .best-container .best-imagebox .best-imagebox-center {
@@ -796,9 +797,6 @@ span + span {
   background-image: url("../img/fotos/Sobre\ BEST\ Coimbra2.jpg");
   background-position: center;
   background-size: cover;
-  position: absolute;
-  right: 0;
-  margin-right: 3rem;
   border: solid 5px var(--color-yellow);
   border-radius: 10px;
 }
@@ -817,7 +815,7 @@ span + span {
   width: 7.5rem;
   border-radius: 10px 10px 0 0;
   padding-top: 0.1rem;
-  left: 34%;
+  left: 37%;
 }
 
 .best .best-container .best-imagebox .best-imagebox-center .box p {
@@ -838,6 +836,104 @@ span + span {
   text-align: center;
   margin-bottom: 15px;
 }
+
+@media only screen and (max-width: 1140px) {
+  .best {
+    padding: 6rem 0;
+  }
+  .best .best-title {
+    margin-bottom: 1.3rem;
+  }
+  .best .best-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  
+  .best .best-container {
+    display: block;
+    width: auto;
+  }
+
+  .best .best-container .best-imagebox {
+    width: auto;
+    margin-right: 0;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .best .best-container .best-imagebox .best-imagebox-center {
+    margin: auto;
+  }
+  .best .best-container .best-imagebox .best-imagebox-center .best-button-box {
+    display: flex;
+    justify-content: center;
+  }
+  .best .best-container .best-imagebox .best-imagebox-center .box {
+    left: auto;
+  }
+
+  .best .best-container .best-text1 {
+    margin: auto
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .best {
+    padding: 6rem 1rem;
+  }
+  .best .best-title h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .best .best-container .best-imagebox .best-imagebox-center {
+    width: auto;
+  }
+
+  .best .best-container .best-text1 {
+    width: auto;
+    font-size: 12px;
+  }
+  .best .best-container .best-text1 h5 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .best .best-title h1 {
+    font-size: 1.7rem;
+  }
+  .best .best-container .best-imagebox .best-imagebox-center {
+    height: 220px;
+  }
+  .best .best-container .best-text1 h5 {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .best {
+    padding: 4rem 1rem;
+  }
+  .best .best-title {
+    margin-bottom: 1rem;
+  }
+  .best .best-title h1 {
+    font-size: 1.5rem;
+  }
+  .best .best-container .best-imagebox .best-imagebox-center {
+    height: 200px;
+  }
+  .best .best-container .best-text1 h5 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .best .best-container .best-imagebox .best-imagebox-center {
+    height: 170px;
+  }
+}
+
 
 /* ======================= START DIVIDER ======================= */
 .divider-sections {
