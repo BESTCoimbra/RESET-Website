@@ -589,14 +589,6 @@ span + span {
   display: flex;
 }
 
-.categorias .categorias-container .cat-bloco .cat-background {
-  margin-top: 2rem;
-  height: 6rem;
-  width: 50rem;
-  position: absolute;
-  z-index: 1;
-}
-
 .categorias .categorias-container .cat-bloco .cat-card {
   z-index: 1;
   background-color: white;
@@ -639,6 +631,7 @@ span + span {
 @media only screen and (max-width: 860px) {
   .categorias,
   .categorias .categorias-container {
+    width: auto;
     height: auto;
   }
   .categorias .categorias-container .categorias-title h1{
