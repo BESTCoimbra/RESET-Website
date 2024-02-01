@@ -1697,3 +1697,41 @@ span + span {
 .footer .footer-container .footer-down p {
   font-size: 0.8rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .footer .footer-container {
+    padding: 1rem 1.5rem 0.3rem;
+  }
+  .footer .footer-container .footer-up .footer-up-left img {
+    margin-top: 0.65rem;
+    width: 80px;
+  }
+  .footer .footer-container .footer-up .footer-up-right img {
+    margin: 0.3rem;
+    width: 16px;
+  }
+  .footer .footer-container .footer-down p {
+    font-size: 0.7rem;
+  }
+  .footer .footer-container .footer-up {
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .footer .footer-container {
+    padding: 0.8rem 1.3rem 0.3rem;
+  }
+  .footer .footer-container .footer-up .footer-up-left img {
+    width: 75px;
+  }
+  .footer .footer-container .footer-up .footer-up-right img {
+    width: 15px;
+  }
+  .footer .footer-container .footer-down p {
+    font-size: 0.6rem;
+  }
+  .footer .footer-container .footer-up {
+    padding-bottom: 1.5rem;
+  }
+}
