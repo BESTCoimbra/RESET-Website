@@ -274,6 +274,10 @@ header .box-right .home-logo-best {
   background-color: var(--color-blue);
 }
 
+.home-inscricoes-button button:hover {
+  background-color: #2b4ba5;
+}
+
 header .box-right .home-logo-best img {
   width: 100px;
 }
@@ -967,11 +971,14 @@ span + span {
   font-family: var(--fonte-padrao);
 }
 
-.schedule .image-schedule-default {
-  height: 700px;
-  width: 600px;
-  background-color: gray;
+.schedule .img-box {
+  width: 500px;
   margin: auto;
+}
+
+.schedule .img-box img {
+  width: 100%;
+  height: auto;
 }
 
 @media only screen and (max-width: 860px) {
@@ -984,23 +991,17 @@ span + span {
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .schedule .image-schedule-default {
-    height: 600px;
-    width: 500px;
+@media only screen and (max-width: 600px) {
+  .schedule-box {
+    height: auto;
   }
-}
-
-@media only screen and (max-width: 550px) {
-  .schedule .image-schedule-default {
-    height: 500px;
+  .schedule .img-box {
     width: 420px;
   }
 }
 
-@media only screen and (max-width: 450px) {
-  .schedule .image-schedule-default {
-    height: 400px;
+@media only screen and (max-width: 480px) {
+  .schedule .img-box {
     width: 340px;
   }
   .schedule h1 {
@@ -1009,15 +1010,13 @@ span + span {
 }
 
 @media only screen and (max-width: 380px) {
-  .schedule .image-schedule-default {
-    height: 300px;
-    width: 250px;
+  .schedule .img-box {
+    width: 290px;
   }
 }
 
 @media only screen and (max-width: 290px) {
-  .schedule .image-schedule-default {
-    height: 250px;
+  .schedule .img-box {
     width: 210px;
   }
 }
