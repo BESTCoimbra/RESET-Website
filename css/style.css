@@ -69,8 +69,12 @@ header .nav {
   transition: background-color 0.5s;
 }
 
-.nav-default {
+.nav-on-transparent {
   background-color: transparent;
+}
+
+.nav-default {
+  background-color: var(--color-yellow);
 }
 
 .nav-on-yellow {
@@ -324,6 +328,7 @@ span + span {
   animation: ease .7s bottom-2 forwards;
 }
 
+
 @keyframes top {
   0% {
     top: 0;
@@ -434,6 +439,12 @@ span + span {
   color: white;
   border-bottom: 1px solid #ffffff25;
   cursor: pointer;
+}
+
+.menu-navbar-phone .botao_apply button {
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 /* responsividade navbar */

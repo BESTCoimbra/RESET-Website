@@ -158,23 +158,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   const onScroll = () => {
     let isNavbarOnYellow = false;
+    let isNavbarInHeader = false
 
     yellowSections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
+      const homepageLimit = document.querySelector("header").offsetHeight;
       const scrollPosition = window.scrollY + navbar.offsetHeight*2;
 
-      if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+      if (scrollPosition < homepageLimit) {
+        isNavbarInHeader = true;
+      }
+      else if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
         isNavbarOnYellow = true;
       }
     });
 
-    if (isNavbarOnYellow) {
+    if (isNavbarInHeader) {
+      navbar.classList.add('nav-on-transparent');
+      navbar.classList.remove('nav-default');
+      navbar.classList.remove('nav-on-yellow');
+    } else if (isNavbarOnYellow) {
       navbar.classList.add('nav-on-yellow');
       navbar.classList.remove('nav-default');
+      navbar.classList.remove('nav-on-transparent');
     } else {
       navbar.classList.add('nav-default');
       navbar.classList.remove('nav-on-yellow');
+      navbar.classList.remove('nav-on-transparent');
     }
   };
 
