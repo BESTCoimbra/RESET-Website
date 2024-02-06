@@ -21,6 +21,21 @@
   box-sizing: border-box;
 }
 
+button {
+  padding: 8px 35px;
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: white;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #ff4b51;
+}
+
 /* ======================= START HEADER AND STARTING SCREEN ======================= */
 .nav-option {
   text-decoration: none;
@@ -34,7 +49,7 @@ header {
   color: #fff;
   display: flex;
   font-family: var(--fonte-padrao);
-  background-image: url("../img/fotos/home-page.jpg");
+  background-image: url("../img/background/post-template\ 2.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -46,16 +61,16 @@ header .nav {
   position: fixed;
   width: 100%;
   height: 6rem;
-  padding: 8px 7rem;
+  padding: 8px 4rem;
   font-family: var(--fonte-padrao);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.548);
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.548);*/
   z-index: 99999;
   justify-content: space-between;
   transition: background-color 0.5s;
 }
 
 .nav-default {
-  background-color: var(--color-yellow);
+  background-color: transparent;
 }
 
 .nav-on-yellow {
@@ -69,6 +84,15 @@ header .options {
 header .options .nav-bar {
   display: flex;
   align-items: center;
+}
+
+header .options .nav-bar .botao_apply {
+  margin-left: 15px;
+}
+
+header .options .nav-bar .botao_apply button{
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 header .logo-header {
@@ -89,63 +113,166 @@ header .nav-bar .nav-option {
 
 header .box-left {
   width: 50%;
-}
-
-header .box-right {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-top: 6rem;
-  width: 50%;
-  height: 100%;
-  background-color: #e7c98ebd;
-  align-items: center;
   text-align: center;
 }
 
-header .box-right .home-inscricoes-text {
-  color: var(--color-blue);
+header .box-left img {
+  width: 108%;
+  transform: translateY(10%) translateX(-13%);
 }
 
-header .box-right .home-inscricoes-text h2 {
-  font-weight: 700;
+header .box-right {
+  font-family: "Archivo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10rem;
+  width: 50%;
+  height: 100%;
 }
 
-header .box-right .contador {
-  background-color: var(--color-yellow);
+.box-right-title h1 {
+  color: black;
+  text-shadow: 
+    -1px -1px 0 var(--color-red),  
+     1px -1px 0 var(--color-red),
+    -1px  1px 0 var(--color-red),
+     1px  1px 0 var(--color-red);
+  font-weight: 900; 
+  font-size: 60px;
+}
+
+.box-right-title h5 {
   color: var(--color-red);
-  display: flex;
-  justify-content: center;
-  padding: 0.8rem 2.4rem 0.6rem 2.4rem;
-  border-radius: 10px;
-  
+  font-size: 22px;
+  font-weight: 900; 
 }
 
-header .box-right .contador h1 {
-  font-size: 80px;
+.box-right-img {
+  position: absolute;
+  transform: translateX(-53rem) translateY(-3rem);
+  width: 20rem;
+}
+
+.box-right-img img {
+  width: 50rem !important;
+}
+
+.home-righ-center {
+  width: 27.1rem;
+  margin-left: 14%;
+  text-align: center;
+}
+
+.home-inscricoes-text {
+  color: black;
+  margin-top: 4rem;
+}
+
+.home-inscricoes-text h3 {
   font-weight: 700;
+  font-size: 24px;
 }
 
-header .box-right .contador .contador-values {
+.home-righ-center .contador {
   display: flex;
-  height: min-content;
+  margin: auto;
+  max-width: 27.1rem;
+  justify-content: space-between;
 }
 
-header .box-right .home-righ-center {
-  margin: auto;
+.home-righ-center .contador .contador-values {
+  margin-top: 0.5rem;
+  width: 5rem;
+}
+
+.home-righ-center .contador .contador-values .contador-values-box {
+  position: relative;
+  border: 1px solid black;
+  background-color: var(--color-red);
+  border-radius: 10px;
+  padding: 1.1rem 0 0.5rem;
+  box-shadow: 2px 2px 6px #0000009d;
+}
+
+.contador-values-box h1 {
+  position: relative;
+  z-index: 9;
+}
+
+.contador-values-box .contador-values-back {
+  position: absolute;
+  height: 51%;
+  width: 100%;
+  background-color: #ff6368;
+  border-radius: 10px 10px 0 0;
+  top: 0;
+}
+
+.contador-values-box .contador-values-line {
+  top: 0;
+  height: 51%;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  position: absolute;
+  z-index: 10;
+}
+
+.contador-values-box .contador-values-back .cvb-left {
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(0.5rem);
+  height: 1rem;
+  width: 0.15rem;
+}
+
+.contador-values-box .contador-values-back .cvb-right {
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(0.5rem);
+  height: 1rem;
+  width: 0.1rem;
+}
+
+.demo-days-p,
+.demo-hours-p,
+.demo-minutes-p,
+.demo-seconds-p {
+  width: 100%;
+}
+
+.home-righ-center .contador .contador-values h3 {
+  margin-top: 0.5rem;
+  font-size: 16px;
+  color: #000;
+}
+
+.home-inscricoes-text-bottom h4 {
+  color: #000;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 1.5rem 0 1rem;
 }
 
 header .box-right .home-logo-best {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin: 1.5rem;
+  margin: 2rem 3rem;
 }
 
-header .box-right img {
-  width: 140px;
+.home-inscricoes-button button {
+  border-radius: 5px;
+  background-color: var(--color-blue);
 }
 
+header .box-right .home-logo-best img {
+  width: 100px;
+}
 
 .container-menu-nav {
   display: none;
@@ -356,55 +483,186 @@ span + span {
 }
 
 /* responsividade home-page */
-@media only screen and (max-width: 1000px) {
-  header .box-right .contador {
-    padding: 0.8rem 2rem 0.5rem 2rem;
+@media only screen and (max-width: 1240px) {
+  .box-right-title h1 {
+    font-size: 50px;
   }
-  
-  header .box-right .contador h1 {
-    font-size: 60px;
+  .box-right-img {
+    transform: translateX(-46rem) translateY(-3rem);
   }
+  .box-right-img img {
+    width: 45rem !important;
+  }
+  .box-right-title h5 {
+    font-size: 18px;
+  }
+  .home-righ-center {
+    margin-left: 2%;
+  }
+}
 
-  header .box-right .home-inscricoes-text h2 {
-    font-size: 24px;
+@media only screen and (max-width: 1050px) {
+  header .box-right {
+    width: 60%;
+    text-align: center;
+    align-items: center;
   }
-  
-  header .box-right img {
-    width: 120px;
+  header .box-left {
+    width: 40%;
+    text-align: center;
+  }
+  .box-right-title h1 {
+    font-size: 40px;
+  }
+  .box-right-img {
+    transform: translateX(-200%) translateY(0);
+  }
+  .box-right-img img {
+    width: 36rem !important;
+  }
+  .box-right-title h5 {
+    font-size: 16px;
+  }
+  .home-righ-center {
+    margin-left: 0;
+  }
+  .home-righ-center .contador {
+    width: 24rem;
   }
 }
 @media only screen and (max-width: 750px) {
-  header .box-right .contador {
-    padding: 0.7rem 1rem 0.1rem;
+  header .box-right {
+    width: 100%;
+    text-align: center;
+    align-items: center;
   }
-  
-  header .box-right .contador h1 {
-    font-size: 45px;
+  .box-right-img {
+    position: relative;
+    transform: translateX(0) translateY(0);
+    margin: 1rem 0;
   }
-
-  header .box-right .home-inscricoes-text h2 {
-    font-size: 20px;
+  .box-right-img img {
+    width: 10rem !important;
   }
-  
-  header .box-right img {
-    width: 120px;
-  }
-}
-@media only screen and (max-width: 600px) {
   header .box-left {
     width: 0%;
   }
+  .home-inscricoes-text {
+    margin-top: 1rem;
+  } 
+  .home-inscricoes-text h3 {
+    font-size: 17px;
+  }
+  .home-righ-center .contador {
+    max-width: 21rem;
+  }
+  .home-righ-center .contador .contador-values {
+    width: 4.5rem;
+  }
+  .home-righ-center .contador .contador-values .contador-values-box {
+    padding: 1rem 0 0.4rem;
+  }
+  .contador-values-box .contador-values-back .cvb-left {
+    width: 2px;
+  }
+  .contador-values-box .contador-values-back .cvb-right {
+    width: 2px;
+  }
+  .home-righ-center .contador .contador-values h3 {
+    margin-top: 0.4rem;
+    font-size: 13px;
+  }
 
+  .home-inscricoes-text-bottom h4 {
+    font-size: 14px;
+    margin: 0.5rem 0;
+  }
+  .home-inscricoes-button button {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 550px) {
   header .box-right {
+    text-align: left;
+  }
+  .box-right-title h1 {
+    font-size: 36px;
+  }
+  .box-right {
+    padding: 0 2rem;
+  }
+  .box-right-title {
     width: 100%;
+  }
+  .box-right-img {
+    text-align: center;
+    width: auto;
+  }
+  header .box-right .home-logo-best {
+    margin: 2rem;
+  }
+  header .home-logo-best img {
+    width: 5rem !important;
+  }
+  .home-righ-center {
+    width: auto;
   }
 }
 
+@media only screen and (max-width: 450px) {
+  header .box-right {
+    text-align: left;
+    padding-top: 8rem;
+  }
+  .box-right-title h1 {
+    font-size: 28px;
+  }
+  .home-inscricoes-text h3 {
+    margin-bottom: 0;
+  }
+  .home-righ-center .contador {
+    max-width: 16rem;
+  }
+  .home-righ-center .contador .contador-values {
+    width: 3.5rem;
+  }
+  .box-right-img {
+    margin: 2rem 0 1rem;
+  }
+  .box-right-img img {
+    width: 13rem !important;
+  }
+  .home-righ-center .contador .contador-values .contador-values-box {
+    padding: 0.8rem 0 0.2rem;
+  }
+  .home-righ-center .contador .contador-values .contador-values-box h1 {
+    font-size: 22px;
+  }
+  .contador-values-box .contador-values-back .cvb-left {
+    width: 1px;
+  }
+  .contador-values-box .contador-values-back .cvb-right {
+    width: 1px;
+  }
+  .home-righ-center .contador .contador-values h3 {
+    margin-top: 0.4rem;
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .box-right {
+    padding: 0 1rem;
+  }
+  
+}
 
 
 /* ======================= START ABOUT EVENT ======================= */
 .about-event {
+  position: relative;
+  background-color: white;
   padding: 6rem 0;
+  z-index: 2;
 }
 
 .about-event .about-event-container {
