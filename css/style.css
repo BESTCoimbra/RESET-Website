@@ -1909,7 +1909,6 @@ span + span {
 @media only screen and (max-width: 510px) {
   .team .team-container .title-team h1 {
     font-size: 2rem;
-    margin: 0 2rem;
   }
   .team .team-container .team-box {
     width: 19.8rem;
