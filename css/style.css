@@ -30,6 +30,7 @@ button {
   transition: all 0.3s ease 0s;
   color: white;
   font-size: 14px;
+  box-shadow: 1px 1px 6px #0000005d;
 }
 
 button:hover {
@@ -75,10 +76,12 @@ header .nav {
 
 .nav-default {
   background-color: var(--color-yellow);
+  box-shadow: 2px 2px 6px #0000005d;
 }
 
 .nav-on-yellow {
-  background-color: #ffe4ab;
+  background-color: #fff2d5;
+  box-shadow: 2px 2px 6px #0000005d;
 }
 
 header .options {
@@ -883,12 +886,6 @@ span + span {
   font-size: 0.9rem;
 }
 
-.categorias .categorias-container .cat-bloco .cat-card .image-card-default {
-  height: 150px;
-  width: 290px;
-  background-color: gray;
-}
-
 .categorias .categorias-container .cat-bloco .cat-card h4 {
   color: var(--color-blue);
   margin-top: 1rem;
@@ -896,10 +893,23 @@ span + span {
   font-family: var(--fonte-padrao);
 }
 
+.categorias .categorias-container .cat-bloco .cat-bloco-empresas {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .categorias .categorias-container .cat-bloco .cat-card img {
   width: 290px;
   border-radius: 5px;
 }
+
+.categorias .categorias-container .cat-bloco .cat-bloco-empresas img {
+  width: 45%;
+  height: auto;
+  object-fit: contain;
+}
+
 
 @media only screen and (max-width: 860px) {
   .categorias,
@@ -1362,17 +1372,47 @@ span + span {
 }
 
 .parceiros .sec-empresas img {
-  width: 24rem;
+  width: 17rem;
   border-radius: 5px;
 }
 
 .parceiros .sec-empresas .ul-parceiros2 img {
-  width: 17rem;
+  width: 15rem;
 }
 
 .parceiros .sec-empresas .ul-parceiros3 img {
-  width: 14rem;
+  width: 13rem;
 }
+
+.parceiros-carousel {
+  overflow: hidden;
+  margin: 3rem auto 0;
+  width: 100%;
+  height: 5rem;
+  max-width: 1200px;
+}
+
+.parceiros-carousel-images {
+  display: flex;
+  height: 100%;
+  animation: slide 14s linear infinite;
+}
+
+.parceiros-carousel-images img {
+  flex-shrink: 0;
+  margin: 1rem;
+  object-fit: contain;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-80%); /* Move 25% para a esquerda, pois há 4 imagens */
+  }
+}
+
 
 @media only screen and (max-width: 1050px) {
   .parceiros .parceiros-box {
@@ -1384,15 +1424,19 @@ span + span {
   }
   
   .parceiros .sec-empresas img {
-    width: 21rem;
+    width: 15rem;
   }
   
   .parceiros .sec-empresas .ul-parceiros2 img {
-    width: 14rem;
+    width: 13rem;
   }
 
   .parceiros .sec-empresas .ul-parceiros3 img {
-    width: 12rem;
+    width: 11rem;
+  }
+
+  .parceiros-carousel {
+    height: 4.5rem;
   }
 }
 
@@ -1415,7 +1459,7 @@ span + span {
   }
   
   .parceiros .sec-empresas img {
-    width: 18rem;
+    width: 13rem;
   }
   
   .parceiros .sec-empresas .ul-parceiros2 img {
@@ -1423,7 +1467,12 @@ span + span {
   }
 
   .parceiros .sec-empresas .ul-parceiros3 img {
-    width: 10rem;
+    width: 9rem;
+  }
+
+  .parceiros-carousel {
+    margin: 2rem auto 0;
+    height: 4rem;
   }
 }
 
@@ -1446,15 +1495,20 @@ span + span {
   }
   
   .parceiros .sec-empresas img {
-    width: 16rem;
+    width: 11rem;
   }
   
   .parceiros .sec-empresas .ul-parceiros2 img {
-    width: 10rem;
+    width: 9rem;
   }
 
   .parceiros .sec-empresas .ul-parceiros3 img {
-    width: 8rem;
+    width: 7rem;
+  }
+
+  .parceiros-carousel {
+    margin: 1.5rem auto 0;
+    height: 3.5rem;
   }
 }
 
@@ -1476,11 +1530,11 @@ span + span {
   }
   
   .parceiros .sec-empresas img {
-    width: 14rem;
+    width: 9rem;
   }
   
   .parceiros .sec-empresas .ul-parceiros2 img {
-    width: 9rem;
+    width: 7.5rem;
   }
 
   .parceiros .sec-empresas .ul-parceiros3 img {
@@ -1514,7 +1568,7 @@ span + span {
   }
   
   .parceiros .sec-empresas li {
-    width: 40%;
+    width: 36%;
   }
   
   .parceiros .sec-empresas .ul-parceiros2 li {
@@ -1522,7 +1576,7 @@ span + span {
   }
 
   .parceiros .sec-empresas .ul-parceiros3 li {
-    width: 20%;
+    width: 23%;
   }
 
   .parceiros .sec-instituicoes img, 
@@ -1551,6 +1605,9 @@ span + span {
     width: 90px;
     margin: 0 auto 0.4rem;
   }
+  .parceiros-carousel {
+    margin: 1rem auto 0;
+  }
 }
 
 @media only screen and (max-width: 380px) {
@@ -1563,6 +1620,10 @@ span + span {
     height: 2px;
     width: 70px;
     margin: 0 auto 0.3rem;
+  }
+
+  .parceiros-carousel {
+    margin: 0.5rem auto 0;
   }
 }
 

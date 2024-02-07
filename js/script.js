@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', (event) => {
   const navbar = document.querySelector('header .nav');
   navbar.classList.add('nav-on-transparent');
-  const yellowSections = document.querySelectorAll('.parceiros, .categorias-horario');
+  const yellowSections = document.querySelectorAll('.team, .categorias-horario');
 
   const onScroll = () => {
     let isNavbarInHeader = false
