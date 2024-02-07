@@ -153,20 +153,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const navbar = document.querySelector('header .nav');
-  navbar.classList.add('nav-default');
+  navbar.classList.add('nav-on-transparent');
   const yellowSections = document.querySelectorAll('.parceiros, .categorias-horario');
 
   const onScroll = () => {
-    let isNavbarOnYellow = false;
     let isNavbarInHeader = false
+    let isNavbarOnYellow = false;
 
     yellowSections.forEach((section) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
-      const homepageLimit = document.querySelector("header").offsetHeight;
       const scrollPosition = window.scrollY + navbar.offsetHeight*2;
 
-      if (scrollPosition < homepageLimit) {
+      if (window.scrollY < 50) {
         isNavbarInHeader = true;
       }
       else if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
