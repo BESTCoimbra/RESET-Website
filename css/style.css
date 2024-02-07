@@ -132,8 +132,9 @@ header .box-right {
   font-family: "Archivo", sans-serif;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
-  padding-top: 10rem;
+  padding-top: 3rem;
   width: 50%;
   height: 100%;
 }
@@ -157,7 +158,7 @@ header .box-right {
 
 .box-right-img {
   position: absolute;
-  transform: translateX(-53rem) translateY(-3rem);
+  transform: translateX(-53rem) translateY(3rem);
   width: 20rem;
 }
 
@@ -496,7 +497,7 @@ span + span {
   }
 
   header .nav .logo-header {
-    padding-top: 1.35rem;
+    padding: 1.35rem 0 0 1rem;
   }
 }
 
@@ -666,6 +667,17 @@ span + span {
     margin-top: 0.4rem;
     font-size: 10px;
   }
+  @media only screen and (max-height: 740px) {
+    .home-logo-best {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-height: 820px) {
+    .box-right-img {
+      margin: 2.5rem 0 1rem;
+    }
+  }
 }
 @media only screen and (max-width: 370px) {
   .box-right {
@@ -735,11 +747,11 @@ span + span {
 
 .about-event .about-event-button-positioner {
   display: flex;
+  justify-content: space-between;
 }
 
 .about-event .about-event-button-positioner div {
   display: block;
-  max-height: 1000px;
 }
 
 .about-event .about-event-link {
@@ -755,7 +767,7 @@ span + span {
   transition: 0.22s;
 }
 
-.about-event .about-event-link:hover {
+.about-event #about-event-button-submit:hover {
   background-color: var(--color-red);
   border-color: var(--color-red);
 }
@@ -765,8 +777,22 @@ span + span {
   position: relative;
   padding: 10px 20px;
   text-decoration: none;
+  font-size: 14px;
   color: #fff;
   cursor: pointer;
+}
+
+.about-event-link-button {
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-event-link-button p {
+  margin: 0;
 }
 
 @media only screen and (max-width: 1120px) {
@@ -805,11 +831,8 @@ span + span {
   .about-event .about-text {
     width: auto;
   }
-}
-
-@media only screen and (max-width: 460px) {
   .about-event .about-event-link {
-    margin: 10px 10px 10px 0;
+    margin: 0;
   }
 }
 
@@ -819,13 +842,24 @@ span + span {
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .about-event .about-event-button-positioner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-event .about-event-link {
+    margin: 0.5rem 0;
+  }
+}
+
 /* ======================= START CATEGORIAS ======================= */
 .categorias-horario {
   background-image: url("../img/fotos/Group\ 34.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   height: 100%;
   width: 100%;
 }
@@ -942,9 +976,10 @@ span + span {
     padding: 2.5rem 2.2rem;
   }
 
-  .categorias .categorias-container .cat-bloco .cat-card img {
-    width: 250px;
+  .categorias .categorias-container .cat-bloco .cat-card .cat-card-img {
+    width: 100%;
   }
+
   .categorias .categorias-container .cat-bloco .cat-card p {
     padding: 0.3rem 0;
     font-size: 0.8rem;
@@ -955,10 +990,6 @@ span + span {
   .categorias .categorias-container .cat-bloco .cat-card {
     width: 18rem;
     padding: 2rem 1.5rem;
-  }
-
-  .categorias .categorias-container .cat-bloco .cat-card img {
-    width: 240px;
   }
 
   .categorias .categorias-container .cat-bloco .cat-card p {
@@ -1087,10 +1118,16 @@ span + span {
   border-radius: 10px 10px 0 0;
   padding-top: 0.1rem;
   left: 37%;
+  transition: 0.2s;
+}
+
+.best .best-container .best-imagebox .best-imagebox-center .box:hover {
+  background-color: #ffd069;
 }
 
 .best .best-container .best-imagebox .best-imagebox-center .box p {
   margin: 0;
+  margin-bottom: 0.1rem;
 }
 
 .best .best-container .best-text1 {
@@ -1223,7 +1260,6 @@ span + span {
 }
 
 #divider-container {
-  width: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1240,7 +1276,6 @@ span + span {
   outline: none;
   border: 0;
   vertical-align: middle;
-  
 }
 
 .divider-sections button.divider-face-button {
