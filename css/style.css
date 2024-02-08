@@ -38,6 +38,122 @@ button:hover {
 }
 
 /* ======================= START HEADER AND STARTING SCREEN ======================= */
+@keyframes loader {
+
+  0%,
+  10%,
+  100% {
+    width: 80px;
+    height: 80px;
+  }
+
+  65% {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes loaderBlock {
+
+  0%,
+  30% {
+    transform: rotate(0);
+  }
+
+  55% {
+    background-color: #f77272;
+  }
+
+  100% {
+    transform: rotate(90deg);
+
+  }
+}
+
+@keyframes loaderBlockInverse {
+
+  0%,
+  20% {
+    transform: rotate(0);
+  }
+
+  55% {
+    background-color: #f77272;
+  }
+
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #554d49;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+  animation: loader 1.2s infinite ease-in-out;
+}
+
+.loader span {
+  margin: 0;
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #EE4040;
+  animation: loaderBlock 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader span:nth-child(2) {
+  top: 0;
+  right: 0;
+  animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+}
+
+.loader span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+.disappear {
+  animation: vanish 1s forwards;
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* ======================= START HEADER AND STARTING SCREEN ======================= */
 .nav-option {
   text-decoration: none;
   color: #0d0d0d;
@@ -858,13 +974,13 @@ span + span {
 }
 
 .categorias {
-  height: 58rem;
+  height: 62rem;
   display: flex;
 }
 
 .categorias .categorias-container {
   width: 50rem;
-  height: 40rem;
+  height: 50rem;
   margin: auto;
 }
 
@@ -927,14 +1043,28 @@ span + span {
 }
 
 .categorias .categorias-container .cat-bloco .cat-card img {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   border-radius: 5px;
 }
 
 .categorias .categorias-container .cat-bloco .cat-bloco-empresas img {
-  width: 45%;
+  width: 60%;
+  margin: auto;
   height: auto;
   object-fit: contain;
+}
+
+.categorias .categorias-container .cat-bloco .cat-card-desafio h5 {
+  color: var(--color-blue);
+  font-size: 16px;
+  margin: 1rem 0 0;
+}
+
+.categorias .categorias-container .cat-bloco .cat-card-desafio img {
+  width: 60%;
+  height: auto;
+  margin: auto
 }
 
 

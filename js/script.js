@@ -1,3 +1,13 @@
+(function () {
+  "use strict";
+  //===== Prealoder =====
+  var loader = document.querySelector(".loader-container");
+  window.addEventListener("load", vanish);
+  function vanish() {
+    loader.classList.add("disappear");
+  }
+})();
+
 function desativateOpenResponses(id) {
   var response = document.querySelector(".response-" + id);
   var question = document.querySelector(".question-" + id);
