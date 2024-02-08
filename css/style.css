@@ -601,11 +601,8 @@ span + span {
   }
 }
 @media only screen and (max-width: 550px) {
-  header .box-right {
-    text-align: left;
-  }
   .box-right-title h1 {
-    font-size: 36px;
+    font-size: 38px;
   }
   .box-right {
     padding: 0 2rem;
@@ -629,12 +626,8 @@ span + span {
 }
 
 @media only screen and (max-width: 450px) {
-  header .box-right {
-    text-align: left;
-    padding-top: 8rem;
-  }
   .box-right-title h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
   .home-inscricoes-text h3 {
     margin-bottom: 0;
@@ -649,7 +642,7 @@ span + span {
     margin: 2rem 0 1rem;
   }
   .box-right-img img {
-    width: 13rem !important;
+    width: 12rem !important;
   }
   .home-righ-center .contador .contador-values .contador-values-box {
     padding: 0.8rem 0 0.2rem;
@@ -934,7 +927,7 @@ span + span {
 }
 
 .categorias .categorias-container .cat-bloco .cat-card img {
-  width: 290px;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -1187,7 +1180,7 @@ span + span {
 
 @media only screen and (max-width: 600px) {
   .best {
-    padding: 6rem 1rem;
+    padding: 3rem 1rem 6rem;
   }
   .best .best-title h1 {
     font-size: 2rem;
@@ -1220,7 +1213,7 @@ span + span {
 
 @media only screen and (max-width: 400px) {
   .best {
-    padding: 4rem 1rem;
+    padding: 3rem 1rem 4rem;
   }
   .best .best-title {
     margin-bottom: 1rem;
@@ -1270,6 +1263,8 @@ span + span {
 }
 
 .divider-sections button {
+  all: initial;
+  display: revert;
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -1309,6 +1304,7 @@ span + span {
 
 .divider-eye.divider-right {
   left: 2rem;
+  margin-top: 0.05rem;
 }
 
 .divider-mouth {
@@ -1625,20 +1621,20 @@ span + span {
 
 @media only screen and (max-width: 480px) {
   .parceiros {
-    padding: 3rem 0 4.5rem;
+    padding: 3rem 1rem;
   }
   .parceiros .title-parceiros-empresas {
     margin-top: 3rem;
   }
   .parceiros .title-parceiros h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 0 1.5rem;
   }
 
   .parceiros .parceiros-title-line {
     height: 3px;
     width: 90px;
-    margin: 0 auto 0.4rem;
+    margin: 0 auto 1%;
   }
   .parceiros-carousel {
     margin: 1rem auto 0;
@@ -1654,7 +1650,7 @@ span + span {
   .parceiros .parceiros-title-line {
     height: 2px;
     width: 70px;
-    margin: 0 auto 0.3rem;
+    margin: 0 auto 0.6rem;
   }
 
   .parceiros-carousel {
@@ -1828,7 +1824,7 @@ span + span {
 
 @media only screen and (max-width: 500px) {
   .faq {
-    padding: 6rem 0.5rem 0;
+    padding: 4rem 0.5rem 4rem;
     height: auto;
   }
   .faq .faq-container {
@@ -1838,7 +1834,7 @@ span + span {
 
 /* ======================= START TEAM ======================= */
 .team {
-  padding: 4rem 0 5rem;
+  padding: 5rem 0;
   font-family: var(--fonte-padrao);
   background-color: var(--color-yellow);
 }
@@ -1850,14 +1846,8 @@ span + span {
   color: var(--color-blue);
   font-size: 3rem;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   font-weight: 600;
-}
-
-.team .team-container .team-line {
-  width: 7rem;
-  height: 0.5rem;
-  margin: 0 auto 2.5rem;
 }
 
 .team .team-container .team-box {
@@ -2003,6 +1993,9 @@ span + span {
 }
 
 @media only screen and (max-width: 510px) {
+  .team {
+    padding: 5rem 0;
+  }
   .team .team-container .title-team h1 {
     font-size: 2rem;
   }
